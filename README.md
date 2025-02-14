@@ -19,11 +19,7 @@ ollama run llama3.2-vision:11b-instruct-q8_0
    python main.py
    ```
 3. The output JSON file will be saved as `output/auto_claim.json`.
-4. To convert the JSON file to CSV, run the `json2CSV.py` script:
-   ```bash
-   python json2CSV.py
-   ```
-5. The resulting CSV file will be saved as `output/auto_claim.csv`, and images will be copied to the `output` directory.
+4. The resulting CSV file will be saved as `output/auto_claim.csv`, and images will be copied to the `output` directory.
 
 ## Logging
 The application logs information and errors to the console. You can adjust the logging level in the `main.py` file.
