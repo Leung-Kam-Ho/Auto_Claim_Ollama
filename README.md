@@ -11,7 +11,7 @@ You can install the required libraries using
 pip install -r requirements.txt
 ```
 
-To use ollama, you need to install ollama from [here](https://ollama.com/)
+To use Ollama, you need to install ollama from [here](https://ollama.com/)
 
 run the following command to install the required model
 ```bash
