@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import List
 from glob import glob
 from ollama import chat
 import json
@@ -10,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 class ImageAnalyzer:
-    def __init__(self, image_paths: List[str]):
+    def __init__(self, image_paths: list[str]):
         self.image_paths = image_paths
         self.json_data = {}
         self.failures = 0  # Initialize a counter for failures
