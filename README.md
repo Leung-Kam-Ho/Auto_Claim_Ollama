@@ -1,7 +1,9 @@
 # Image Analysis and CSV Conversion
 
 ## Overview
-This project analyzes images and converts the results into a CSV format. It utilizes the `ImageAnalyzer` class to process images and the `JsonToCSVConverter` class to convert the JSON output into a CSV file.
+This project analyzes images and converts the results into a CSV format. It utilizes the `ImageAnalyzer` class to process images and the `JsonToCSVConverter` class to convert the JSON output into a CSV file. 
+
+**🤪 Mainly used for generating claim forms from images 🤪**
 
 ## Requirements
 You can install the required libraries using pip install -r requirements.txt
