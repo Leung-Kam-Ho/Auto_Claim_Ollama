@@ -2,3 +2,5 @@
 *.jpeg
 *.json
 *.pyc
+*.csv
+*.pdf

@@ -16,14 +16,15 @@ class ImageAnalyzer:
         self.failures = 0  # Initialize a counter for failures
 
     def analyze_images(self, save_path='auto_claim.json'):
-        # if folder of json file does not exist, create it
+        """Analyze images and save results to a JSON file."""
+        # If folder of json file does not exist, create it
         Path(save_path).parent.mkdir(parents=True, exist_ok=True)
         total_images = len(self.image_paths)
         for index, path in enumerate(self.image_paths):
             path = Path(path)
             # Verify the file exists
             if not path.exists():
-                logger.error(f'Image not found at: {path}')
+                logger.error('Image not found at: %s', path)
                 self.failures += 1  # Increment failure count
                 continue  # Skip to the next image
 
@@ -38,7 +39,7 @@ class ImageAnalyzer:
                         Analyze this image and return a detailed JSON description
                         {
                             product : str # there is a lots of misleading information, please make sure the product name is correct, the name most likely is written near the product image
-                            currency : str  # HKD, RMB
+                            currency : str  # HKD, RMB, USD
                             actual_payment : float  # there is a lots of discount and shipping fee
                             date_of_payment : str  # yyyy-mm-dd
                         }
@@ -48,18 +49,18 @@ class ImageAnalyzer:
                 ],
                 options={'temperature': 0},  # Set temperature to 0 for more deterministic output
             )
-            # get only the content within {} and convert to json
+            # Get only the content within {} and convert to json
             try:
-                logger.info("Response : %s", response.message.content)
+                logger.info("Response: %s", response.message.content)
                 self.json_data = json.loads(response.message.content)
-                # add the image path to the json data
+                # Add the image path to the json data
                 self.json_data['image_path'] = str(path)
 
                 # Append the JSON data to a file
                 with open(save_path, 'a') as f:
                     json.dump(self.json_data, f)
                     f.write('\n')
-                
+
                 # Show progress
                 logger.info("Progress: %d/%d", index + 1, total_images)
             except Exception as e:
@@ -68,6 +69,7 @@ class ImageAnalyzer:
 
         # Log the total number of failures at the end
         logger.info("Total failures: %d", self.failures)
+
 
 if __name__ == "__main__":
     image_paths = glob('item/*.jpeg') + glob('item/*.jpg') + glob('item/*.png')
