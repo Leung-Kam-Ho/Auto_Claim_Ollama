@@ -6,7 +6,10 @@ This project analyzes images and converts the results into a CSV format. It util
 **🤪 Mainly used for generating claim forms from images 🤪**
 
 ## Requirements
-You can install the required libraries using pip install -r requirements.txt
+You can install the required libraries using 
+```bash
+pip install -r requirements.txt
+```
 
 To use ollama, you need to install ollama from [here](https://ollama.com/)
 
