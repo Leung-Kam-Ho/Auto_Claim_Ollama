@@ -23,7 +23,7 @@ class JsonToCSVConverter:
 
         # Write to CSV
         with open(self.csv_file, 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['name_of_goods', 'currency', 'final_price', 'date_of_payment', 'image_path']
+            fieldnames = ['product', 'currency', 'actual_payment', 'date_of_payment', 'image_path']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             writer.writeheader()

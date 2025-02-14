@@ -37,7 +37,7 @@ class ImageAnalyzer:
                         'content': """
                         Analyze this image and return a detailed JSON description
                         {
-                            product : str # there is a lots of misleading information, please make sure the product name is correct
+                            product : str # there is a lots of misleading information, please make sure the product name is correct, the name most likely is written near the product image
                             currency : str  # HKD, RMB
                             actual_payment : float  # there is a lots of discount and shipping fee
                             date_of_payment : str  # yyyy-mm-dd
