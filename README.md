@@ -4,17 +4,7 @@
 This project analyzes images and converts the results into a CSV format. It utilizes the `ImageAnalyzer` class to process images and the `JsonToCSVConverter` class to convert the JSON output into a CSV file.
 
 ## Requirements
-- Python 3.x
-- Required libraries:
-  - `ollama`
-  - `json`
-  - `csv`
-  - `datetime`
-  - `os`
-  - `shutil`
-  - `pathlib`
-  
-You can install the required libraries using pip:
+You can install the required libraries using pip install -r requirements.txt:
 
 ## Usage
 1. Place your images in the `item` directory. Supported formats are `.jpeg`, `.jpg`, and `.png`.
