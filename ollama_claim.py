@@ -29,7 +29,7 @@ class ImageAnalyzer:
 
             # Set up chat as usual
             response = chat(
-                model="llama3.2-vision:11b-instruct-q8_0",
+                model="mistral-small3.1",
                 format="json",  # Pass in the schema for the response
                 messages=[
                     {
@@ -37,7 +37,7 @@ class ImageAnalyzer:
                         'content': """
                         Analyze this image and return a detailed JSON description
                         {
-                            product : str # there is a lots of misleading information, please make sure the product name is correct, the name most likely is written near the product image
+                            product : str # there is a lots of misleading information, please make sure the product name is correct, the name most likely is written near the product image and bold font
                             currency : str  # HKD, RMB, USD
                             actual_payment : float  # there is a lots of discount and shipping fee
                             date_of_payment : str  # yyyy-mm-dd

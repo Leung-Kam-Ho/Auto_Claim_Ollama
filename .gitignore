@@ -1,6 +1,10 @@
 *.png
 *.jpeg
+*.jpg
 *.json
 *.pyc
 *.csv
 *.pdf
+.DS_Store
+__pycache__
+
